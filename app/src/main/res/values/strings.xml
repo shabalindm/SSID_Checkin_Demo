@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">SSID_Checkin_Demo</string>
+    <string name="server_dns">http://192.168.1.101:8080/ctx/checkin</string>
+    <string name="facebook_app_id">289477734717069</string>
+
+    <string name="title_activity_main">People in the location</string>
+    <string name="title_activity_select_term">SelectTermActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Log Out</string>
+    <string name="select_time_dialog_title">How long you\'ll be staying here?</string>
+    <string name="Error_on_scanning_WIFIs">Error on scanning WIFIs</string>
+    <string name="No_WIFI_spot_visible">No WIFI spot visible</string>
+
+    <string name="time_10_min">10 min</string>
+    <string name="time_20_min">20 min</string>
+    <string name="time_30_min">30 min</string>
+    <string name="time_40_min">40 min</string>
+    <string name="time_1_h">1 h</string>
+    <string name="time_1.5_h">1 h 30 min</string>
+    <string name="time_2_h">2 h</string>
+    <string name="time_3_h">3 h</string>
+    <string name="time_4_h">4 h</string>
+    <string name="time_5_h">5 h</string>
+    <string name="time_6_h">6 h</string>
+    <string name="time_7_h">7 h</string>
+    <string name="time_8_h">8 h</string>
+    <string name="time_10_h">10 h</string>
+    <string name="error_on_connection_to_server">Error on connection to server</string>
+    <string name="you">You</string>
+
+
+</resources>
