@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SSID_Checkin_Demo</string>
-    <string name="server_dns">http://192.168.1.101:8080/ctx/checkin</string>
+    <string name="server_dns">http://checkindem-dsh6.rhcloud.com/checkin</string>
     <string name="facebook_app_id">289477734717069</string>
 
     <string name="title_activity_main">People in the location</string>

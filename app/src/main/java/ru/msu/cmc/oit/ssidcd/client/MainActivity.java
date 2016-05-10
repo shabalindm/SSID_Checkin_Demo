@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     UserListAdapter adapter;
     boolean progress;
     private List<TimeDialogOptionObject> list;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver wifiScanReceiver;
 
 
     @Override
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void registerWifiScanResultReceiver() {
-        BroadcastReceiver mWifiScanReceiver = new BroadcastReceiver() {
+        wifiScanReceiver = new BroadcastReceiver() {
             @Override
           public void onReceive(Context c, Intent intent) {
               // This condition is not necessary if you listen to only one action
@@ -111,9 +113,9 @@ public class MainActivity extends AppCompatActivity {
               }
           }
       };
-        IntentFilter intentFilter = new IntentFilter();
+        intentFilter = new IntentFilter();
         intentFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
-        registerReceiver(mWifiScanReceiver, intentFilter);
+        registerReceiver(wifiScanReceiver, intentFilter);
     }
 
     private List<TimeDialogOptionObject> createTimeDialogOptionList() {
@@ -220,10 +222,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(wifiScanReceiver);
+    }
+
     private void goToLogin() {
         Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
         finish();
     }
+
+
 
 }
