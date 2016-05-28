@@ -21,8 +21,9 @@ public class FacebookHashGenerator extends Application {
         super.onCreate();
 
         try {
+            String packageName = getPackageName();
             PackageInfo info = getPackageManager().getPackageInfo(
-                    "ru.msu.cmc.oit.wificheckin",
+                     packageName,
                     PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
