@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
         accessTokenTracker = new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+                goToMainActivity(Profile.getCurrentProfile());
 
             }
         };
